@@ -83,3 +83,10 @@ CREATE TABLE reporte_pagos_mensual (
     total_pendiente DECIMAL(14,2),
     fecha_generado TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE reporte_mensual_pendientes (
+    id_reporte INT AUTO_INCREMENT PRIMARY KEY,
+    fecha_reporte DATE,
+    id_contrato INT,
+    deuda DECIMAL(12,2)
+);
